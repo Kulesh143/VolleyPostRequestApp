@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void hiVolley(View view) {
         String namii=((EditText) findViewById(R.id.etxt)).getText().toString();
-        String  url = String.format("http://192.168.8.108/volley/vuser.php?naga="+namii);
+        String  url = String.format("http://ipaddresshere/volley/vuser.php?naga="+namii);
         TextView tx=findViewById(R.id.txt);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void hi(View view) {
         String namii=((EditText) findViewById(R.id.etxt)).getText().toString();
-        String  url = String.format("http://192.168.8.108/volley/wuser.php");
+        String  url = String.format("http://ipaddresshere/volley/wuser.php");
 
         StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void postVolley(View view) {
         String jam=((EditText)findViewById(R.id.etxt2)).getText().toString();
-        String url=String.format("http://192.168.8.108/volley/wuser.php");
+        String url=String.format("http://ipaddresshere/volley/wuser.php");
         StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
